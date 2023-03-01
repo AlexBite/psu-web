@@ -1,16 +1,26 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import * as React from 'react';
+import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import './app.module.scss';
+import NxWelcome from "./nx-welcome";
 
-import NxWelcome from './nx-welcome';
-
-export function App() {
-  return (
-    <>
-      <NxWelcome title="psu-web" />
-
-      <div />
-    </>
-  );
-}
+export const App = () => (
+	<BrowserRouter>
+		<div className="app">
+			<nav className="app-nav">
+				<ul>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+				</ul>
+			</nav>
+			<div className="app-content">
+				<Routes>
+					<Route path="/" element={<NxWelcome title={'Home'}/>}/>
+				</Routes>
+			</div>
+		</div>
+	</BrowserRouter>
+);
 
 export default App;
