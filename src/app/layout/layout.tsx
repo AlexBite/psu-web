@@ -16,6 +16,7 @@ export const Layout = () => {
       />
       <Navigation></Navigation>
       <Outlet />
+        <div style={{marginTop: '3rem'}}></div>
       <Footer></Footer>
     </>
   );
