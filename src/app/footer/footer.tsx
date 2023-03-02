@@ -1,7 +1,4 @@
-import styles from './footer.module.scss';
-import {
-  Envelope,
-} from 'react-bootstrap-icons';
+import { Envelope } from 'react-bootstrap-icons';
 
 /* eslint-disable-next-line */
 export interface FooterProps {}

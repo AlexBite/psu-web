@@ -10,7 +10,10 @@ export interface LayoutProps {}
 export const Layout = () => {
   return (
     <>
-      <img className={`${styles['deco-line__left']} d-none d-xxl-block`} src={decoLineImg} />
+      <img
+        className={`${styles['deco-line__left']} d-none d-xxl-block`}
+        src={decoLineImg}
+      />
       <Navigation></Navigation>
       <Outlet />
       <Footer></Footer>
