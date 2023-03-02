@@ -22,7 +22,7 @@ const ROUTES = [
 ]
 
 export function Navigation(props: NavigationProps) {
-	const navLinks = ROUTES.map((r) => <Nav.Link as={Link} to={r.path}>{r.title}</Nav.Link>)
+	const navLinks = ROUTES.map((r) => <Nav.Link key={Math.random()} as={Link} to={r.path}>{r.title}</Nav.Link>)
 	return (
 		<Navbar className="border-bottom" expand="md">
 			<Container>

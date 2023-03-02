@@ -7,7 +7,7 @@ export interface FooterProps {
 
 export function Footer(props: FooterProps) {
 	return (
-		<footer className="py-3 border-top">
+		<footer className="py-3 border-top mt-5">
 			<div className="row">
 				<div className="col-6 col-md-2 mb-3">
 					<h5>Университет</h5>

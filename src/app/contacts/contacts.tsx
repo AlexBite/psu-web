@@ -21,7 +21,7 @@ export function Contacts(props: ContactsProps) {
 						</a>
 						<iframe
 							src="https://yandex.ru/map-widget/v1/?ll=56.187505%2C58.007698&mode=poi&poi%5Bpoint%5D=56.187901%2C58.008369&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1694653172&z=16.1"
-							width="560" height="400" frameBorder="1" allowFullScreen={true}
+							width="800" height="400" frameBorder="1" allowFullScreen={true}
 							style={{position: 'relative'}}></iframe>
 					</div>
 				</div>
