@@ -7,68 +7,53 @@ export interface FooterProps {
 
 export function Footer(props: FooterProps) {
 	return (
-		<footer className="py-5">
+		<footer className="py-3 border-top">
 			<div className="row">
 				<div className="col-6 col-md-2 mb-3">
-					<h5>Section</h5>
+					<h5>Университет</h5>
 					<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Ректорат</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Приёмная</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Факультеты</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Подразделения</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Пресс-служба</a></li>
 					</ul>
 				</div>
 
 				<div className="col-6 col-md-2 mb-3">
-					<h5>Section</h5>
+					<h5>Образование</h5>
 					<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Довузовское</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Высшее</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Среднее</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Профпереподготовка</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Международное образование</a></li>
 					</ul>
 				</div>
 
 				<div className="col-6 col-md-2 mb-3">
-					<h5>Section</h5>
+					<h5>Официальная информация</h5>
 					<ul className="nav flex-column">
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Фотогалерея</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Видеогалерея</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Цифры и факты</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Новости ПГНИУ</a></li>
+						<li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Нормативы</a></li>
 					</ul>
 				</div>
 
 				<div className="col-md-5 offset-md-1 mb-3">
 					<form>
-						<h5>Subscribe to our newsletter</h5>
-						<p>Monthly digest of what's new and exciting from us.</p>
+						<h5>Подпишитесь на обновления</h5>
+						<p>Ежемесячная рассылка о наших невероятных изменениях</p>
 						<div className="d-flex flex-column flex-sm-row w-100 gap-2">
 							<label htmlFor="newsletter1" className="visually-hidden">Email address</label>
 							<input id="newsletter1" type="text" className="form-control"
-								   placeholder="Email address"></input>
+								   placeholder="user@mail.ru"></input>
 							<button className="btn btn-primary" type="button">Subscribe</button>
 						</div>
 					</form>
 				</div>
-			</div>
-
-			<div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-				<p>© 2022 Company, Inc. All rights reserved.</p>
-				<ul className="list-unstyled d-flex">
-					<li className="ms-3"><a className="link-dark" href="#">
-						<Twitter></Twitter>
-					</a></li>
-					<li className="ms-3"><a className="link-dark" href="#">
-						<Instagram></Instagram>
-					</a></li>
-					<li className="ms-3"><a className="link-dark" href="#">
-						<Facebook></Facebook>
-					</a></li>
-				</ul>
 			</div>
 		</footer>
 	);

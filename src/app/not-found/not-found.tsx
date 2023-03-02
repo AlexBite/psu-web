@@ -6,7 +6,7 @@ export interface NotFoundProps {}
 export function NotFound(props: NotFoundProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to NotFound!</h1>
+      <h1>Страница не найдена!</h1>
     </div>
   );
 }
