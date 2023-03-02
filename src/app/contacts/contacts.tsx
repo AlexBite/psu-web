@@ -6,7 +6,6 @@ export interface ContactsProps {}
 export function Contacts(props: ContactsProps) {
   return (
     <>
-      <h1 className="align-content-center">Контакты</h1>
       <div className="row">
         <div className="col-md-8">
           <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -52,7 +51,10 @@ export function Contacts(props: ContactsProps) {
             ></iframe>
           </div>
         </div>
-        <div className="col-md-4 mt-3 mt-md-0" style={{alignSelf: 'flex-start', borderLeft: '3px solid #C62E3E'}}>
+        <div
+          className="col-md-4 mt-3 mt-md-0"
+          style={{ alignSelf: 'flex-start', borderLeft: '3px solid #C62E3E' }}
+        >
           <div>
             <Telephone
               style={{ marginRight: 10, color: '#C62E3E' }}
@@ -71,7 +73,8 @@ export function Contacts(props: ContactsProps) {
             <HouseDoor
               style={{ marginRight: 10, color: '#C62E3E' }}
             ></HouseDoor>
-              <span>Приёмная:</span><span> Корпус 8, эт. 3</span>
+            <span>Приёмная:</span>
+            <span> Корпус 8, эт. 3</span>
           </div>
         </div>
       </div>

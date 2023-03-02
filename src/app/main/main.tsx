@@ -19,40 +19,45 @@ export function Main(props: MainProps) {
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
-  
-  const carouselData = [{
-    src: logoImage,
-    title: 'Ведущий университет',
-    subTitle: 'ПГНИУ - 9й в рейтинге ведущих ВУЗов РФ по версии Interfax'
-  }, {
-    src: profmapImage,
-    title: 'Карта профессий',
-    subTitle: 'Определитесь с выбором профессии будущего'
-  }, {
-    src: nationalProjectImage,
-    title: 'Национальные проекты',
-    subTitle: 'Наш университет участник программы поддержки ведущих вузов РФ'
-  }]
-  
+
+  const carouselData = [
+    {
+      src: logoImage,
+      title: 'Ведущий университет',
+      subTitle: 'ПГНИУ - 9й в рейтинге ведущих ВУЗов РФ по версии Interfax',
+    },
+    {
+      src: profmapImage,
+      title: 'Карта профессий',
+      subTitle: 'Определитесь с выбором профессии будущего',
+    },
+    {
+      src: nationalProjectImage,
+      title: 'Национальные проекты',
+      subTitle: 'Наш университет участник программы поддержки ведущих вузов РФ',
+    },
+  ];
+
   const buildItems = (data: ICarouselData[]): JSX.Element[] => {
     return data.map((i) => {
-      return <Carousel.Item key={Math.random()}>
-        <img
+      return (
+        <Carousel.Item key={Math.random()}>
+          <img
             className={`d-block w-100 ${styles['carousel-img']}`}
             src={i.src}
-            alt='Slide'
-        />
-        <Carousel.Caption>
-          <h3>{i.title}</h3>
-          <p>{i.subTitle}</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    })
-  }
+            alt="Slide"
+          />
+          <Carousel.Caption>
+            <h3>{i.title}</h3>
+            <p>{i.subTitle}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      );
+    });
+  };
 
   return (
     <>
-      <h1>Главная</h1>
       <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
         {buildItems(carouselData)}
       </Carousel>

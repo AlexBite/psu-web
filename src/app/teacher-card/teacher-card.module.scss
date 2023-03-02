@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  padding: 10px;
+  align-self: flex-start;
+}
+
+.photo {
+  width: 100px;
+  object-fit: contain;
+}
+
+.description {
+  margin-left: 10px;
+  border-left: 2px solid #C62E3E;
+  padding-left: 10px;
+}
+

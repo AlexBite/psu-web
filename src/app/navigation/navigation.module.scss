@@ -6,11 +6,9 @@
  * }
 */
 .container {
-  //background-color: #000000;
-}
-
-.nav-link {
-  color: white;
+  .navbar-nav {
+    align-self: flex-end;
+  }
 }
 
 .nav-active {

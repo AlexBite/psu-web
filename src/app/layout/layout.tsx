@@ -1,5 +1,5 @@
 import styles from './layout.module.scss';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navigation from '../navigation/navigation';
 import Footer from '../footer/footer';
 import decoLineImg from 'src/assets/deco-line-left.png';
@@ -8,6 +8,7 @@ import decoLineImg from 'src/assets/deco-line-left.png';
 export interface LayoutProps {}
 
 export const Layout = () => {
+  const location = useLocation();
   return (
     <>
       <img
@@ -15,8 +16,9 @@ export const Layout = () => {
         src={decoLineImg}
       />
       <Navigation></Navigation>
+      <h3 style={{ opacity: 0.5 }}>{location.state?.title}</h3>
       <Outlet />
-        <div style={{marginTop: '3rem'}}></div>
+      <div style={{ marginTop: '3rem' }}></div>
       <Footer></Footer>
     </>
   );
