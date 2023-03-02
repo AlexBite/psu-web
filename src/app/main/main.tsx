@@ -1,55 +1,60 @@
 import styles from './main.module.scss';
 import { Carousel } from 'react-bootstrap';
 import { useState } from 'react';
+import logoImage from 'src/assets/logo.jpg';
+import profmapImage from 'src/assets/profmap.png';
+import nationalProjectImage from 'src/assets/national-projects.jpg';
 
 /* eslint-disable-next-line */
 export interface MainProps {}
+
+interface ICarouselData {
+  src: string;
+  title: string;
+  subTitle: string;
+}
 
 export function Main(props: MainProps) {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
+  
+  const carouselData = [{
+    src: logoImage,
+    title: 'Ведущий университет',
+    subTitle: 'ПГНИУ - 9й в рейтинге ведущих ВУЗов РФ по версии Interfax'
+  }, {
+    src: profmapImage,
+    title: 'Карта профессий',
+    subTitle: 'Определитесь с выбором профессии будущего'
+  }, {
+    src: nationalProjectImage,
+    title: 'Национальные проекты',
+    subTitle: 'Наш университет участник программы поддержки ведущих вузов РФ'
+  }]
+  
+  const buildItems = (data: ICarouselData[]): JSX.Element[] => {
+    return data.map((i) => {
+      return <Carousel.Item key={Math.random()}>
+        <img
+            className={`d-block w-100 ${styles['carousel-img']}`}
+            src={i.src}
+            alt='Slide'
+        />
+        <Carousel.Caption>
+          <h3>{i.title}</h3>
+          <p>{i.subTitle}</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    })
+  }
 
   return (
     <>
       <h1>Главная</h1>
       <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles['carousel-img']}`}
-            src="../../assets/logo.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>Ведущий университет</h3>
-            <p>ПГНИУ - 9й в рейтинге ведущих ВУЗов РФ по версии Interfax</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles['carousel-img']}`}
-            src="../../assets/profmap.png"
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Карта профессий</h3>
-            <p>Определитесь с выбором профессии будущего</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className={`d-block w-100 ${styles['carousel-img']}`}
-            src="../../assets/national-projects.jpg"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Национальные проекты</h3>
-            <p>Наш университет участник программы поддержки ведущих вузов РФ</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        {buildItems(carouselData)}
       </Carousel>
       <div>
         <div className="mt-3 w-50 mx-auto">
