@@ -1,18 +1,19 @@
 import styles from './layout.module.scss';
-import { Link, Outlet } from "react-router-dom";
-import Navigation from "../navigation/navigation";
-import Footer from "../footer/footer";
+import { Outlet } from 'react-router-dom';
+import Navigation from '../navigation/navigation';
+import Footer from '../footer/footer';
+import decoLineImg from 'src/assets/deco-line-left.png';
 
 /* eslint-disable-next-line */
-export interface LayoutProps {
-}
+export interface LayoutProps {}
 
 export const Layout = () => {
-	return (
-		<>
-			<Navigation></Navigation>
-			<Outlet/>
-			<Footer></Footer>
-		</>
-	)
+  return (
+    <>
+      <img className={`${styles['deco-line__left']} d-none d-xxl-block`} src={decoLineImg} />
+      <Navigation></Navigation>
+      <Outlet />
+      <Footer></Footer>
+    </>
+  );
 };
