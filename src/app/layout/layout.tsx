@@ -9,10 +9,10 @@ export interface LayoutProps {
 
 export const Layout = () => {
 	return (
-		<>
+		<div className="container">
 			<Navigation></Navigation>
 			<Outlet/>
 			<Footer></Footer>
-		</>
+		</div>
 	)
 };

@@ -24,7 +24,7 @@ const ROUTES = [
 export function Navigation(props: NavigationProps) {
 	const navLinks = ROUTES.map((r) => <Nav.Link as={Link} to={r.path}>{r.title}</Nav.Link>)
 	return (
-		<Navbar className={styles['container']} expand="lg">
+		<Navbar className="border-bottom" expand="md">
 			<Container>
 				<Navbar.Brand as={Link} to="/">ПГНИУ</Navbar.Brand>
 				<Nav>
