@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './app.module.scss';
 import { Layout } from './layout/layout';
 import Main from './main/main';
@@ -9,7 +9,7 @@ import Teachers from './teachers/teachers';
 import NotFound from './not-found/not-found';
 
 export const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Main />}></Route>
@@ -18,7 +18,7 @@ export const App = () => (
         <Route path="*" element={<NotFound />}></Route>
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
