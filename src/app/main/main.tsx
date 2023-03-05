@@ -4,6 +4,8 @@ import { useState } from 'react';
 import logoImage from 'src/assets/logo.jpg';
 import profmapImage from 'src/assets/profmap.png';
 import nationalProjectImage from 'src/assets/national-projects.jpg';
+import panoramaImage from 'src/assets/panorama.jpg';
+import infoImage from 'src/assets/info.png';
 
 /* eslint-disable-next-line */
 export interface MainProps {}
@@ -48,7 +50,7 @@ export function Main(props: MainProps) {
             alt="Slide"
           />
           <Carousel.Caption>
-            <h3>{i.title}</h3>
+            <h3 style={{ color: '#3c3c3b' }}>{i.title}</h3>
             <p>{i.subTitle}</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -125,6 +127,24 @@ export function Main(props: MainProps) {
           </div>
         </div>
       </div>
+      <h3 style={{ color: '#3c3c3b' }} className="mt-5">
+        Об университете
+      </h3>
+      <div className="row">
+        <img className="col-md-6" src={panoramaImage} />
+        <div className="col-md-6" style={{ fontSize: '2vh' }}>
+          {' '}
+          Федеральное государственное автономное образовательное учреждение
+          высшего образования «Пермский государственный национальный
+          исследовательский университет» (ПГНИУ) –{' '}
+          <span style={{ fontWeight: 'bold', color: '#c62e3e' }}>
+            первый университет на Урале
+          </span>
+          , один из учредителей Ассоциации классических университетов России и
+          Ассоциации ведущих университетов России.
+        </div>
+      </div>
+      <div></div>
     </>
   );
 }
