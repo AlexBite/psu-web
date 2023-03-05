@@ -2,7 +2,7 @@
   "name": "psu-web",
   "version": "0.0.0",
   "license": "MIT",
-  "homepage": "https://alexbite.github.io/psu-web/#",
+  "homepage": "https://alexbite.github.io/psu-web",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
