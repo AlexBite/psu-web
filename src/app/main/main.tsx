@@ -5,7 +5,6 @@ import logoImage from 'src/assets/logo.jpg';
 import profmapImage from 'src/assets/profmap.png';
 import nationalProjectImage from 'src/assets/national-projects.jpg';
 import panoramaImage from 'src/assets/panorama.jpg';
-import infoImage from 'src/assets/info.png';
 
 /* eslint-disable-next-line */
 export interface MainProps {}
